@@ -8,7 +8,7 @@
 </head>
 <body>
     <div id="app">
-        <h1 :style="{ fontSize: size + 'px' }">{{ message }}</h1>
+        <h1 :style="{ fontSize: size + 'px' }" @click="grow" >{{ message }}</h1>
       </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
@@ -18,7 +18,12 @@
             el: '#app',
             data: {
                 message: 'This is my Test Page',
-                size: 36
+                size: 72
+             },
+             methods: {
+                 grow(){
+                     this.size += 5;
+                 }
              }
         })
     </script>
