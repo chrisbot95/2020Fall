@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
     <link href="./main.css" rel="stylesheet"/>
     <title>Test Page</title>
 </head>
@@ -74,6 +75,8 @@
         <div id="app">
             <div class="columns">
                 <div class="column">
+                    <div class="columns">
+                        <div class="column">
                     <div class="card">
                         <header class="card-header">
                           <p class="card-header-title">
@@ -90,59 +93,41 @@
                         </footer>
                       </div>
                 </div>
-                <div class="column">
-                    <div class="card">
-                        <header class="card-header">
-                          <p class="card-header-title">
-                            Cooling System
-                          </p> 
-                        </header>
-                        <div class="card-content">
-                          <div class="content">
-                            Don't burn out your components
-                          </div>
-                        </div>
-                        <footer class="card-footer">
-                          <a href="#" class="card-footer-item">Add to cart</a>
-                        </footer>
-                      </div>
-                </div>
-                <div class="column">
-                    <div class="card">
-                        <header class="card-header">
-                          <p class="card-header-title">
-                            SSD
-                          </p> 
-                        </header>
-                        <div class="card-content">
-                          <div class="content">
-                            Don't run out of room
-                          </div>
-                        </div>
-                        <footer class="card-footer">
-                          <a href="#" class="card-footer-item">Add to cart</a>
-                        </footer>
-                      </div>
-                </div>
-                <div class="column">
-                    <div class="card">
-                        <header class="card-header">
-                          <p class="card-header-title">
-                            Screen
-                          </p> 
-                        </header>
-                        <div class="card-content">
-                          <div class="content">
-                            Big enough to see everything
-                          </div>
-                        </div>
-                        <footer class="card-footer">
-                          <a href="#" class="card-footer-item">Add to cart</a>
-                        </footer>
-                      </div>
-                </div>
             </div>
-        
+            </div>
+            <div class="column is-one-quarter">
+                <article class="panel is-primary">
+                    <p class="panel-heading">
+                      Your Cart
+                    </p>
+                    
+                    <a class="panel-block is-active">
+                      <span class="panel-icon">
+                        <i class="fas fa-book" aria-hidden="true"></i>
+                      </span>
+                      Keyboard
+                    </a>
+                    <a class="panel-block">
+                      <span class="panel-icon">
+                        <i class="fas fa-book" aria-hidden="true"></i>
+                      </span>
+                      SSD
+                    </a>
+                    <a class="panel-block">
+                      <span class="panel-icon">
+                        <i class="fas fa-book" aria-hidden="true"></i>
+                      </span>
+                      SSD
+                    </a>
+                    <a class="panel-block">
+                      <span class="panel-icon">
+                        <i class="fas fa-book" aria-hidden="true"></i>
+                      </span>
+                      Screen
+                    </a>
+                  </article>
+            </div>
+        </div>
         </div>
     </div>
 
@@ -153,7 +138,13 @@
             el: '#app',
             data: {
                 message: 'This is my Test Page',
-                size: 72
+                size: 72,
+                inventory: [
+                    { name: "SSD", description: "Don't run out of room", price: 60 },
+                    { name: "Keyboard", description: "Play games and program when you want to", price: 200 },
+                    { name: "Cooling System", description: "Don't burn out your components", price: 250 },
+                    { name: "Screen", description: "Big enough to see everything", price: 90 },
+                ]
              },
              methods: {
                  grow(){
