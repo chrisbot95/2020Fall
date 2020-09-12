@@ -76,16 +76,17 @@
             <div class="columns">
                 <div class="column">
                     <div class="columns">
-                        <div class="column">
+                        <div class="column" v-for="item in inventory">
                     <div class="card">
                         <header class="card-header">
                           <p class="card-header-title">
-                            Keyboard
+                            {{item.name}}
                           </p> 
                         </header>
                         <div class="card-content">
                           <div class="content">
-                            Play games and program when you want to
+                            {{item.description}}
+                            <span class="tag is-primary">${{item.price}}</span>
                           </div>
                         </div>
                         <footer class="card-footer">
