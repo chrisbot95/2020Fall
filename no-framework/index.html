@@ -90,7 +90,7 @@
                           </div>
                         </div>
                         <footer class="card-footer">
-                          <a href="#" class="card-footer-item">Add to cart</a>
+                          <a href="#" class="card-footer-item" @click="addToCart(item.name, item.price)">Add to cart</a>
                         </footer>
                       </div>
                 </div>
@@ -102,30 +102,28 @@
                       Your Cart
                     </p>
                     
-                    <a class="panel-block is-active">
+                    <a class="panel-block is-active" v-for="x in cart">
                       <span class="panel-icon">
                         <i class="fas fa-book" aria-hidden="true"></i>
                       </span>
-                      Keyboard
+                      <span style="flex: 1;">{{x.name}}</span>
+                      
+                      <span>
+                        ${{x.price}}
+                      </span>
                     </a>
+
                     <a class="panel-block">
-                      <span class="panel-icon">
-                        <i class="fas fa-book" aria-hidden="true"></i>
-                      </span>
-                      SSD
-                    </a>
-                    <a class="panel-block">
-                      <span class="panel-icon">
-                        <i class="fas fa-book" aria-hidden="true"></i>
-                      </span>
-                      SSD
-                    </a>
-                    <a class="panel-block">
-                      <span class="panel-icon">
-                        <i class="fas fa-book" aria-hidden="true"></i>
-                      </span>
-                      Screen
-                    </a>
+                        <span class="panel-icon">
+                          <i class="fas fa-book" aria-hidden="true"></i>
+                        </span>
+                        <span style="flex: 1; font-weight: bold;">Total</span>
+                        
+                        <span>
+                          ${{total()}}
+                        </span>
+                      </a>
+                    
                   </article>
             </div>
         </div>
@@ -145,11 +143,18 @@
                     { name: "Keyboard", description: "Play games and program when you want to", price: 200 },
                     { name: "Cooling System", description: "Don't burn out your components", price: 250 },
                     { name: "Screen", description: "Big enough to see everything", price: 90 },
-                ]
+                ],
+                cart: []
              },
              methods: {
                  grow(){
                      this.size += 5;
+                 },
+                 addToCart(name, price){
+                     this.cart.push({ name, price });
+                 },
+                 total(){
+                    return this.cart.reduce( (total, x)=> total += x.price, 0);
                  }
              }
         })
