@@ -1,0 +1,10 @@
+{
+  "name": "2020fall",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chrisbot95/2020Fall.git"
+  },
+  "license": "ISC"
+}
