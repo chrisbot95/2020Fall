@@ -1,9 +1,11 @@
 <template>
-  <div id="app">
-    <Nav />
-    <router-view/>
-    Welcome to New Paltz
-  </div>
+   <section class="section">
+    <div class="container">
+      <Nav />
+      <router-view/>
+  
+    </div>
+  </section>
 </template>
 
 <script>
