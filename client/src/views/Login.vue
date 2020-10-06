@@ -1,5 +1,5 @@
 <template>
-<form>
+<form style="margin-top: 15px">
   <div class="field">
   <p class="control has-icons-left has-icons-right">
     <input class="input" type="email" placeholder="Email">
