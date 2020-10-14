@@ -21,7 +21,7 @@
 </div>
 <div class="field">
   <p class="control">
-    <button class="button is-success">
+    <button class="button is-success" @click.prevent="login">
       Login
     </button>
   </p>
@@ -30,8 +30,20 @@
 </template>
 
 <script>
-export default {
+import session from '@/models/session'
 
+export default {
+  methods: {
+    login(){
+      session.user = {
+        name: 'John Smith',
+        handle: 'johnsmith',
+        profile: 'https://wi-images.condecdn.net/image/jgov7eBrRvb/crop/2040/f/6-facial-recognition-hero.jpg'
+      }
+      session.addNotification('Yay! You logged in', 'success')
+      this.$router.push('feed')
+    }
+  }
 }
 </script>
 

@@ -5,7 +5,7 @@
 export const posts = [
     {
         url: 'https://openthread.google.cn/images/ot-contrib-google.png',
-        message: '',
+        message: 'we have great sandwiches',
         owner: {
             name: 'John Smith',
             handle: 'johnsmith',
@@ -14,7 +14,7 @@ export const posts = [
     },
     {
         url: 'https://www.wfla.com/wp-content/uploads/sites/71/2019/07/Babyshoujo-1145429588220108800-20190630_163109-img1.jpg?w=1280',
-        message: '',
+        message: 'look at that butt',
         owner: {
             name: 'John Smith',
             handle: 'johnsmith',

@@ -21,7 +21,7 @@
     <div class="content">
       {{post.message}}
       <br>
-      <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+      <time datetime="2016-1-1">11:09 PM - {{i}} Jan 2016</time>
     </div>
   </div>
 </div>
@@ -30,12 +30,20 @@
 <script>
 export default {
     props: {
-        post: Object
+        post: Object,
+        i: Number
     }
 }
 </script>
 
 <style>
+    time {
+      font-size: smaller;
+      float: right;
+    }
+    .card .card-content .media{
+      margin: 5px;
+    }
     .card{
         margin-bottom: 30px;
     }
